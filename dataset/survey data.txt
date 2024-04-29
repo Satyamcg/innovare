@@ -1,0 +1,50 @@
+
+1. **Survey ID**: A unique identifier for each survey response. You can use an `INTEGER` data type for this column.
+
+2. **Customer ID**: A unique identifier for each customer who participated in the survey. This would typically be stored as an `INTEGER` or `VARCHAR` data type.
+
+3. **Age**: The age of the customer. You can use an `INTEGER` data type for this column.
+
+4. **Gender**: The gender of the customer. This could be stored as a `VARCHAR` data type.
+
+5. **Income Level**: The income level of the customer. This could be stored as a `VARCHAR` data type or represented using ranges (e.g., "Low", "Medium", "High").
+
+6. **Preferred Product Categories**: Information about the product categories preferred by the customer. This could be stored as a `VARCHAR` data type.
+
+7. **Purchase History**: Details about the customer's purchase history, such as frequency of purchases and types of products purchased. This could be stored as a `VARCHAR` data type.
+
+8. **Loyalty Program Membership**: Indicates whether the customer is a member of the loyalty program. This could be stored as a `BOOLEAN` or `VARCHAR` data type.
+
+9. **Survey Response**: The customer's response to the survey questions. This could be stored as a `VARCHAR` data type.
+
+10. **Date**: The date when the survey was conducted or the survey response was recorded. You can use a `DATE` data type for this column.
+
+
+```sql
+CREATE TABLE SurveyData (
+    SurveyID INTEGER PRIMARY KEY,
+    CustomerID INTEGER,
+    Age INTEGER,
+    Gender VARCHAR(10),
+    IncomeLevel VARCHAR(20),
+    PreferredProductCategories VARCHAR(100),
+    PurchaseHistory VARCHAR(255),
+    LoyaltyProgramMembership VARCHAR(5),
+    SurveyResponse VARCHAR(255),
+    Date DATE
+);
+```
+
+INSERT INTO SurveyData (SurveyID, CustomerID, Age, Gender, IncomeLevel, PreferredProductCategories, PurchaseHistory, LoyaltyProgramMembership, SurveyResponse, Date)
+VALUES 
+    (501, 201, 35, 'Male', 'High', 'Electronics, Clothing', 'Frequent purchases of electronics and clothing items', 'Yes', 'Satisfied with product quality', '2024-04-25'),
+    (502, 202, 28, 'Female', 'Medium', 'Beauty, Personal Care', 'Regular purchases of beauty and personal care products', 'No', 'Neutral', '2024-04-25'),
+    (503, 203, 45, 'Male', 'High', 'Grocery, Household', 'Regular purchases of grocery and household items', 'Yes', 'Satisfied with service', '2024-04-25'),
+    (504, 204, 50, 'Female', 'High', 'Electronics, Home Appliances', 'Frequent purchases of electronics and home appliances', 'Yes', 'Dissatisfied with delivery time', '2024-04-25'),
+    (505, 205, 40, 'Male', 'Medium', 'Books, Office Supplies', 'Regular purchases of books and office supplies', 'No', 'Satisfied with overall experience', '2024-04-25'),
+    (506, 206, 30, 'Female', 'Low', 'Fashion, Accessories', 'Occasional purchases of fashion and accessories', 'No', 'Satisfied with product variety', '2024-04-25'),
+    (507, 207, 55, 'Male', 'High', 'Health, Fitness', 'Frequent purchases of health and fitness products', 'Yes', 'Dissatisfied with pricing', '2024-04-25'),
+    (508, 208, 25, 'Female', 'Low', 'Toys, Games', 'Occasional purchases of toys and games', 'No', 'Satisfied with customer service', '2024-04-25'),
+    (509, 209, 38, 'Male', 'Medium', 'Grocery, Beverages', 'Regular purchases of grocery and beverages', 'Yes', 'Satisfied with delivery options', '2024-04-25'),
+    (510, 210, 48, 'Female', 'High', 'Home Decor, Furniture', 'Frequent purchases of home decor and furniture items', 'Yes', 'Dissatisfied with product quality', '2024-04-25');
+

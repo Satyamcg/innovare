@@ -1,0 +1,51 @@
+
+1. **Competitor ID**: A unique identifier for each competitor. You can use an `INTEGER` or `VARCHAR` data type, depending on how you choose to represent competitor IDs.
+
+2. **Competitor Name**: The name of the competitor. This would typically be stored as a `VARCHAR` data type.
+
+3. **Product ID**: A unique identifier for each product offered by the competitor. Again, you can use an `INTEGER` or `VARCHAR` data type.
+
+4. **Product Name**: The name or description of the product offered by the competitor. This would typically be stored as a `VARCHAR` data type.
+
+5. **Price**: The price of the product offered by the competitor. You can use a `FLOAT` or `DECIMAL` data type to represent prices.
+
+6. **Promotional Strategies**: Information about any promotional strategies or discounts offered by the competitor. This could be stored as a `VARCHAR` data type.
+
+7. **Product Assortment**: Details about the range of products offered by the competitor. This could be stored as a `VARCHAR` data type.
+
+8. **Last Updated**: The date and time when the competitor data was last updated. You can use a `DATETIME` or `TIMESTAMP` data type for this.
+
+Here's a sample SQL table creation script based on the above parameters:
+
+```sql
+CREATE TABLE CompetitorData (
+    CompetitorID INTEGER PRIMARY KEY,
+    CompetitorName VARCHAR(100),
+    ProductID INTEGER,
+    ProductName VARCHAR(100),
+    Price FLOAT,
+    PromotionalStrategies VARCHAR(255),
+    ProductAssortment VARCHAR(255),
+    LastUpdated DATETIME
+);
+
+
+INSERT INTO CompetitorData (CompetitorID, CompetitorName, ProductID, ProductName, Price, PromotionalStrategies, ProductAssortment, LastUpdated)
+VALUES 
+    (1, 'Competitor A', 101, 'Product A', 10.99, 'Buy one get one free', 'Electronics', '2024-04-25 10:00:00'),
+    (2, 'Competitor B', 102, 'Product B', 15.99, '10% off for members', 'Clothing', '2024-04-25 11:00:00'),
+    (3, 'Competitor C', 103, 'Product C', 25.49, 'Free shipping on orders over $50', 'Home Appliances', '2024-04-25 12:00:00'),
+    (4, 'Competitor D', 104, 'Product D', 7.99, 'Bundle discount: buy 2 get 1 free', 'Groceries', '2024-04-25 13:00:00'),
+    (5, 'Competitor E', 105, 'Product E', 19.99, '20% off for new customers', 'Electronics', '2024-04-25 14:00:00'),
+    (6, 'Competitor F', 106, 'Product F', 29.99, 'Flash sale: limited time offer', 'Clothing', '2024-04-25 15:00:00'),
+    (7, 'Competitor G', 107, 'Product G', 11.49, 'Clearance sale: up to 50% off', 'Home Appliances', '2024-04-25 16:00:00'),
+    (8, 'Competitor H', 108, 'Product H', 5.99, 'Special discount for students', 'Groceries', '2024-04-25 17:00:00'),
+    (9, 'Competitor I', 109, 'Product I', 24.99, 'Buy 2 get 1 50% off', 'Electronics', '2024-04-25 18:00:00'),
+    (10, 'Competitor J', 110, 'Product J', 39.99, 'Weekend sale: extra 15% off', 'Clothing', '2024-04-25 19:00:00');
+
+-- Add foreign key constraints
+ALTER TABLE CompetitorData
+ADD CONSTRAINT fk_product_id
+FOREIGN KEY (ProductID) REFERENCES ProductData(ProductID),
+ADD CONSTRAINT fk_last_updated_region_id
+FOREIGN KEY (LastUpdated) REFERENCES RegionLocationData(LastUpdated);

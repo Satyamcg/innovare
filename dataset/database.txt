@@ -1,0 +1,78 @@
+
+1. **Product Data**:
+   - Product ID
+   - Product category
+   - Sub-category
+   - Brand
+   - Package size/quantity
+   - Price
+   - Historical sales data
+   - Seasonal variations in demand
+   
+2. **Transaction Data**:
+   - Transaction ID
+   - Timestamp
+   - Customer ID (if available)
+   - Product ID
+   - Quantity purchased
+   - Price paid
+   - Channel (online/offline)
+   - Region/Store ID
+   - Geo Position (Lat/Long)
+   - Payment method
+   - Promotions or discounts applied
+   
+3. **Customer Data**:
+   - Demographic information (age, gender, income level)
+   - Purchase history
+   - Frequency of purchases
+   - Preferred product categories
+   - Loyalty program membership
+   
+4. **Geographic Data**:
+   - Population density in different regions
+   - Socio-economic clusters or indices
+   - Competitor presence
+   - Traffic patterns around stores
+   
+5. **Seasonality Data**:
+   - Historical sales patterns across different seasons
+   - External factors affecting demand (weather, holidays, events)
+   
+6. **Competitor Data**:
+   - Pricing information of competitors' products
+   - Product assortment
+   - Promotional strategies
+   
+7. **Shelf Management Data**:
+   - Current shelf layouts
+   - Shelf space allocated to different categories/sub-categories
+   - Product placement strategies
+   
+8. **Cost Data**:
+   - Costs associated with transportation, labor, and commodities
+   - Pricing strategies
+   
+9. **Margin Data**:
+   - Profit margins for different products
+   - Historical margin trends
+   
+10. **Survey Data** (if available):
+    - Consumer preferences and behavior
+    - Perception of product quality and pricing
+   
+11. **Market Trends Data**:
+    - Industry reports
+    - Consumer trends and forecasts
+    
+
+    
+12. **Weather Data** (if applicable):
+    - Weather conditions impacting sales
+    
+13. **Promotional Data**:
+    - Historical promotional campaigns
+    - Effectiveness of promotions
+    
+14. **Customer Reviews/Sentiment Data**:
+    - Sentiment analysis of customer reviews

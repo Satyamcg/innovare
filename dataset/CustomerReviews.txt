@@ -1,0 +1,48 @@
+
+1. **Review ID**: A unique identifier for each customer review. You can use an `INTEGER` data type for this column.
+
+2. **Customer ID**: A unique identifier for each customer who provided the review. This would typically be stored as an `INTEGER` or `VARCHAR` data type.
+
+3. **Product ID**: A unique identifier for the product being reviewed. This would typically be stored as an `INTEGER` or `VARCHAR` data type.
+
+4. **Review Date**: The date when the review was submitted. You can use a `DATE` data type for this column.
+
+5. **Review Text**: The text content of the review provided by the customer. This would typically be stored as a `VARCHAR` or `TEXT` data type, depending on the length of the review.
+
+6. **Sentiment Score**: A numerical score indicating the sentiment or opinion expressed in the review. You can use a `FLOAT` or `DECIMAL` data type to represent sentiment scores.
+
+7. **Sentiment Label**: A categorical label representing the sentiment of the review (e.g., positive, negative, neutral). This could be stored as a `VARCHAR` data type.
+
+8. **Product Rating**: The rating provided by the customer for the product (e.g., on a scale of 1 to 5 stars). This would typically be stored as an `INTEGER` or `FLOAT` data type.
+
+9. **Source**: The source or platform from which the review was obtained (e.g., website, social media). This could be stored as a `VARCHAR` data type.
+
+10. **Last Updated**: The date and time when the review data was last updated. You can use a `DATETIME` or `TIMESTAMP` data type for this.
+
+
+```sql
+CREATE TABLE CustomerReviews (
+    ReviewID INTEGER PRIMARY KEY,
+    CustomerID INTEGER,
+    ProductID INTEGER,
+    ReviewDate DATE,
+    ReviewText TEXT,
+    SentimentScore FLOAT,
+    SentimentLabel VARCHAR(20),
+    ProductRating FLOAT,
+    Source VARCHAR(50),
+    LastUpdated DATETIME
+);
+```
+INSERT INTO CustomerReviews (ReviewID, CustomerID, ProductID, ReviewDate, ReviewText, SentimentScore, SentimentLabel, ProductRating, Source, LastUpdated)
+VALUES 
+    (901, 301, 101, '2024-07-15', 'Great product! Very satisfied with the quality.', 0.9, 'Positive', 4.5, 'Website', '2024-07-15 12:00:00'),
+    (902, 302, 102, '2024-09-10', 'Average product, could be better.', 0.5, 'Neutral', 3.0, 'Social Media', '2024-09-10 12:00:00'),
+    (903, 303, 103, '2024-11-20', 'Terrible experience. Product arrived damaged.', 0.1, 'Negative', 1.0, 'Website', '2024-11-20 12:00:00'),
+    (904, 304, 104, '2024-03-05', 'Excellent service and fast delivery!', 0.95, 'Positive', 5.0, 'Website', '2024-03-05 12:00:00'),
+    (905, 305, 105, '2024-10-08', 'Not what I expected. Disappointed with the quality.', 0.3, 'Negative', 2.0, 'Social Media', '2024-10-08 12:00:00'),
+    (906, 306, 106, '2024-12-12', 'Highly recommend this product. Will buy again.', 0.85, 'Positive', 4.5, 'Website', '2024-12-12 12:00:00'),
+    (907, 307, 107, '2024-04-25', 'Decent product for the price. Good value.', 0.7, 'Positive', 3.5, 'Website', '2024-04-25 12:00:00'),
+    (908, 308, 108, '2024-01-03', 'Very disappointed. Product broke after a few uses.', 0.2, 'Negative', 1.0, 'Social Media', '2024-01-03 12:00:00'),
+    (909, 309, 109, '2024-02-18', 'Great customer service. Resolved my issue quickly.', 0.9, 'Positive', 4.0, 'Website', '2024-02-18 12:00:00'),
+    (910, 310, 110, '2024-05-10', 'Okay product, nothing special.', 0.6, 'Neutral', 3.0, 'Social Media', '2024-05-10 12:00:00');

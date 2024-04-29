@@ -1,0 +1,50 @@
+
+1. **Weather ID**: A unique identifier for each weather data entry. You can use an `INTEGER` data type for this column.
+
+2. **Date**: The date for which the weather data is recorded. You can use a `DATE` data type for this column.
+
+3. **Region/Location ID**: An identifier for the region or location where the weather data is recorded. This could be stored as an `INTEGER` or `VARCHAR` data type.
+
+4. **Temperature**: The temperature recorded for the given date and location. You can use a `FLOAT` or `DECIMAL` data type to represent temperatures.
+
+5. **Precipitation**: The amount of precipitation recorded for the given date and location. This could be stored as a `FLOAT` or `DECIMAL` data type.
+
+6. **Humidity**: The humidity level recorded for the given date and location. This could be stored as a `FLOAT` or `DECIMAL` data type.
+
+7. **Weather Condition**: A description of the weather condition (e.g., sunny, cloudy, rainy). This could be stored as a `VARCHAR` data type.
+
+8. **Wind Speed**: The wind speed recorded for the given date and location. You can use a `FLOAT` or `DECIMAL` data type to represent wind speeds.
+
+9. **Weather Events**: Any specific weather events recorded for the given date and location (e.g., thunderstorm, snowstorm). This could be stored as a `VARCHAR` data type.
+
+10. **Last Updated**: The date and time when the weather data was last updated. You can use a `DATETIME` or `TIMESTAMP` data type for this.
+
+
+CREATE TABLE WeatherData (
+    WeatherID INTEGER PRIMARY KEY,
+    Date DATE,
+    LocationID INTEGER,
+    Temperature FLOAT,
+    Precipitation FLOAT,
+    Humidity FLOAT,
+    WeatherCondition VARCHAR(50),
+    WindSpeed FLOAT,
+    WeatherEvents VARCHAR(100),
+    LastUpdated DATETIME
+);
+
+INSERT INTO WeatherData (WeatherID, Date, LocationID, Temperature, Precipitation, Humidity, WeatherCondition, WindSpeed, WeatherEvents, LastUpdated)
+VALUES 
+    (701, '2024-04-25', 101, 25.5, 0.0, 60.0, 'Sunny', 10.0, NULL, '2024-04-25 12:00:00'),
+    (702, '2024-04-25', 102, 20.0, 0.2, 70.0, 'Partly Cloudy', 8.0, NULL, '2024-04-25 12:00:00'),
+    (703, '2024-04-25', 103, 15.5, 1.5, 80.0, 'Rainy', 6.0, 'Light rain showers', '2024-04-25 12:00:00'),
+    (704, '2024-04-25', 104, 18.0, 0.0, 65.0, 'Cloudy', 5.0, NULL, '2024-04-25 12:00:00'),
+    (705, '2024-04-25', 105, 22.5, 0.0, 55.0, 'Sunny', 12.0, NULL, '2024-04-25 12:00:00'),
+    (706, '2024-04-25', 106, 28.0, 0.0, 50.0, 'Sunny', 15.0, NULL, '2024-04-25 12:00:00'),
+    (707, '2024-04-25', 107, 10.0, 2.0, 90.0, 'Rainy', 4.0, 'Heavy rain', '2024-04-25 12:00:00'),
+    (708, '2024-04-25', 108, 24.5, 0.0, 60.0, 'Sunny', 11.0, NULL, '2024-04-25 12:00:00'),
+    (709, '2024-04-25', 109, 19.0, 0.5, 75.0, 'Cloudy', 7.0, 'Light drizzle', '2024-04-25 12:00:00'),
+    (710, '2024-04-25', 110, 17.0, 0.0, 70.0, 'Partly Cloudy', 6.5, NULL, '2024-04-25 12:00:00');
+
+```
+

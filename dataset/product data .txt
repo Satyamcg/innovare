@@ -1,0 +1,45 @@
+1. **Product ID**: A unique identifier for each product.
+2. **Product Name**: The name or description of the product.
+3. **Product Category**: The broad category to which the product belongs (e.g., beverages, snacks, personal care).
+4. **Sub-category**: A more specific category within the broader category (e.g., soft drinks within beverages, chips within snacks).
+5. **Brand**: The brand associated with the product.
+6. **Package Size/Quantity**: The size or quantity of the product in each unit (e.g., 500ml bottle, 200g packet).
+7. **Price**: The price of the product.
+8. **Historical Sales Data**: Sales data over a period of time, including units sold and revenue generated.
+9. **Seasonal Variations**: Any patterns or trends in sales related to seasonal factors (e.g., higher sales of ice cream in summer).
+10. **Product Attributes**: Any additional attributes specific to the product (e.g., ingredients, nutritional information).
+11. **Supplier Information**: Information about the supplier or manufacturer of the product.
+12. **Shelf Life**: The duration for which the product remains suitable for consumption.
+13. **Product Status**: Indicates the current status of the product (e.g., active, discontinued).
+14. **Product Image**: An image of the product for visual reference.
+15. **Promotional History**: Records of any promotions or discounts applied to the product.
+
+**Data Types**:
+- **Product ID**: Typically an alphanumeric string or integer.
+- **Product Name**: Text/String.
+- **Product Category**: Categorical variable.
+- **Sub-category**: Categorical variable.
+- **Brand**: Text/String.
+- **Package Size/Quantity**: Numeric (e.g., integer or float).
+- **Price**: Numeric (e.g., integer or float).
+- **Historical Sales Data**: Numeric (e.g., integer or float) with timestamps.
+- **Seasonal Variations**: Categorical or Boolean variable indicating seasonality.
+- **Product Attributes**: Text/String or categorical variables.
+- **Supplier Information**: Text/String.
+- **Shelf Life**: Numeric or duration type (e.g., timedelta).
+- **Product Status**: Categorical variable (e.g., active, discontinued).
+- **Product Image**: File/image data type or a URL linking to the image.
+- **Promotional History**: Categorical or Boolean variable indicating promotional status.
+
+INSERT INTO ProductData (ProductID, ProductName, ProductCategory, SubCategory, Brand, PackageSize, Price, HistoricalSalesData, SeasonalVariations, ProductAttributes, SupplierInformation, ShelfLife, ProductStatus, ProductImage, PromotionalHistory)
+VALUES 
+    ('P001', 'Coca-Cola Classic', 'Beverages', 'Soft Drinks', 'Coca-Cola', '500ml', 1.99, '[100, 120, 150, 130, 140]', 'Summer:High, Winter:Low', 'Carbonated, Caffeinated', 'The Coca-Cola Company', '365 days', 'Active', 'https://example.com/cocacola.jpg', 'Discounts applied during summer months'),
+    ('P002', 'Lay\'s Classic Potato Chips', 'Snacks', 'Chips', 'Lay\'s', '200g', 2.49, '[80, 90, 100, 110, 120]', 'No significant variations', 'Potatoes, Salt', 'PepsiCo', '180 days', 'Active', 'https://example.com/lays.jpg', 'Frequent promotions'),
+    ('P003', 'Dove Moisturizing Body Wash', 'Personal Care', 'Body Wash', 'Dove', '400ml', 4.99, '[50, 60, 70, 80, 90]', 'Stable sales throughout the year', 'Glycerin, Water, Sodium Laureth Sulfate', 'Unilever', '24 months', 'Active', 'https://example.com/dove.jpg', 'Seasonal discounts available'),
+    ('P004', 'Campbell\'s Chicken Noodle Soup', 'Grocery', 'Canned Goods', 'Campbell\'s', '400g', 1.79, '[70, 80, 90, 100, 110]', 'Higher sales in winter', 'Chicken, Noodles, Broth', 'Campbell Soup Company', '24 months', 'Active', 'https://example.com/campbells.jpg', 'Promoted during flu season'),
+    ('P005', 'Colgate Total Toothpaste', 'Personal Care', 'Oral Care', 'Colgate', '150g', 2.99, '[120, 130, 140, 150, 160]', 'Steady sales', 'Fluoride, Triclosan, Glycerin', 'Colgate-Palmolive', '36 months', 'Active', 'https://example.com/colgate.jpg', 'Occasional discounts'),
+    ('P006', 'Tide Original Laundry Detergent', 'Household', 'Laundry', 'Tide', '1.5L', 9.99, '[90, 100, 110, 120, 130]', 'No significant variations', 'Surfactants, Enzymes, Fragrance', 'Procter & Gamble', '24 months', 'Active', 'https://example.com/tide.jpg', 'Regular promotions'),
+    ('P007', 'Kellogg\'s Frosted Flakes Cereal', 'Grocery', 'Cereal', 'Kellogg\'s', '500g', 3.49, '[80, 90, 100, 110, 120]', 'Steady sales', 'Corn, Sugar, Salt', 'Kellogg Company', '12 months', 'Active', 'https://example.com/kelloggs.jpg', 'Promotions during back-to-school season'),
+    ('P008', 'Pampers Swaddlers Diapers', 'Baby Care', 'Diapers', 'Pampers', 'Newborn (Pack of 36)', 29.99, '[50, 60, 70, 80, 90]', 'No significant variations', 'Cotton, Absorbent Gel Material', 'Procter & Gamble', '36 months', 'Active', 'https://example.com/pampers.jpg', 'Frequent discounts for bulk purchases'),
+    ('P009', 'Ferrero Rocher Hazelnut Chocolates', 'Snacks', 'Chocolates', 'Ferrero', '200g', 4.99, '[60, 70, 80, 90, 100]', 'Higher sales during holidays', 'Chocolate, Hazelnuts', 'Ferrero SpA', '12 months', 'Active', 'https://example.com/ferrerorocher.jpg', 'Limited-time promotions during festive seasons'),
+    ('P010', 'Pepsi Zero Sugar', 'Beverages', 'Soft Drinks', 'Pepsi', '355ml', 1.49, '[90, 100, 110, 120, 130]', 'No significant variations', 'Carbonated, Caffeine-Free', 'PepsiCo', '180 days', 'Active', 'https://example.com/pepsi.jpg', 'Occasional discounts');

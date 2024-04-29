@@ -1,0 +1,50 @@
+
+1. **Promotion ID**: A unique identifier for each promotional campaign. You can use an `INTEGER` data type for this column.
+
+2. **Campaign Name**: The name or description of the promotional campaign. This would typically be stored as a `VARCHAR` data type.
+
+3. **Start Date**: The start date of the promotional campaign. You can use a `DATE` data type for this column.
+
+4. **End Date**: The end date of the promotional campaign. You can use a `DATE` data type for this column.
+
+5. **Promotion Type**: The type of promotion (e.g., discount, buy-one-get-one-free). This could be stored as a `VARCHAR` data type.
+
+6. **Discount Amount**: The amount of discount offered in the promotional campaign. You can use a `FLOAT` or `DECIMAL` data type to represent discounts.
+
+7. **Product ID**: A unique identifier for each product included in the promotional campaign. This would typically be stored as an `INTEGER` or `VARCHAR` data type.
+
+8. **Product Name**: The name or description of the product included in the promotional campaign. This would typically be stored as a `VARCHAR` data type.
+
+9. **Region/Store ID**: An identifier for the region or store where the promotional campaign is applicable. This could be stored as an `INTEGER` or `VARCHAR` data type.
+
+10. **Channel**: The channel through which the promotional campaign is conducted (e.g., online, in-store). This could be stored as a `VARCHAR` data type.
+
+11. **Last Updated**: The date and time when the promotional campaign data was last updated. You can use a `DATETIME` or `TIMESTAMP` data type for this.
+
+
+CREATE TABLE PromotionalData (
+    PromotionID INTEGER PRIMARY KEY,
+    CampaignName VARCHAR(100),
+    StartDate DATE,
+    EndDate DATE,
+    PromotionType VARCHAR(50),
+    DiscountAmount FLOAT,
+    ProductID INTEGER,
+    ProductName VARCHAR(100),
+    RegionStoreID INTEGER,
+    Channel VARCHAR(50),
+    LastUpdated DATETIME
+);
+```
+INSERT INTO PromotionalData (PromotionID, CampaignName, StartDate, EndDate, PromotionType, DiscountAmount, ProductID, ProductName, RegionStoreID, Channel, LastUpdated)
+VALUES 
+    (801, 'Summer Sale', '2024-06-01', '2024-06-30', 'Discount', 0.2, 101, 'Soft Drink', 201, 'In-store', '2024-06-01 12:00:00'),
+    (802, 'Back-to-School Promotion', '2024-08-01', '2024-08-31', 'Buy One Get One Free', NULL, 102, 'Snack Bars', 202, 'Online', '2024-08-01 12:00:00'),
+    (803, 'Holiday Special', '2024-12-01', '2024-12-25', 'Discount', 0.15, 103, 'Chocolate', 203, 'In-store', '2024-12-01 12:00:00'),
+    (804, 'Spring Clearance', '2024-03-15', '2024-03-31', 'Discount', 0.3, 104, 'Canned Soup', 204, 'In-store', '2024-03-15 12:00:00'),
+    (805, 'Black Friday Sale', '2024-11-23', '2024-11-25', 'Discount', 0.25, 105, 'Electronics', 205, 'Online', '2024-11-23 12:00:00'),
+    (806, 'New Year Special', '2024-12-31', '2025-01-01', 'Discount', 0.2, 106, 'Champagne', 206, 'In-store', '2024-12-31 12:00:00'),
+    (807, 'Spring Sale', '2024-04-01', '2024-04-15', 'Discount', 0.25, 107, 'Gardening Tools', 207, 'In-store', '2024-04-01 12:00:00'),
+    (808, 'Winter Clearance', '2024-01-15', '2024-01-31', 'Discount', 0.4, 108, 'Winter Jackets', 208, 'In-store', '2024-01-15 12:00:00'),
+    (809, 'Valentine's Day Promotion', '2024-02-01', '2024-02-14', 'Buy One Get One 50% Off', NULL, 109, 'Flowers', 209, 'In-store', '2024-02-01 12:00:00'),
+    (810, 'Easter Sale', '2024-04-10', '2024-04-15', 'Discount', 0.2, 110, 'Easter Eggs', 210, 'Online', '2024-04-10 12:00:00');

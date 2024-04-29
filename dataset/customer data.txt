@@ -1,0 +1,56 @@
+
+1. **Customer ID**: A unique identifier for each customer.
+2. **First Name**: Customer's first name.
+3. **Last Name**: Customer's last name.
+4. **Email Address**: Customer's email address (if available).
+5. **Phone Number**: Customer's phone number (if available).
+6. **Address**: Customer's address.
+7. **City**: Customer's city.
+8. **State/Province**: Customer's state or province.
+9. **Country**: Customer's country.
+10. **Postal Code/ZIP Code**: Customer's postal code or ZIP code.
+11. **Age**: Customer's age or age range.
+12. **Gender**: Customer's gender.
+13. **Income Level**: Customer's income level or income range.
+14. **Purchase History**: Historical data on purchases made by the customer.
+15. **Frequency of Purchases**: How often the customer makes purchases.
+16. **Preferred Product Categories**: Categories of products the customer frequently purchases.
+17. **Loyalty Program Membership**: Indicates whether the customer is a member of a loyalty program.
+18. **Segmentation Variables**: Variables used for segmenting customers (e.g., demographics, behavior).
+19. **Customer Lifetime Value (CLV)**: Predicted value of the customer to the business over their lifetime.
+20. **Customer Satisfaction Scores**: Scores or feedback indicating customer satisfaction.
+21. **Customer Interactions**: Records of interactions with the customer (e.g., customer service calls, emails).
+22. **Subscription Status**: Indicates whether the customer is subscribed to newsletters or promotional emails.
+23. **Preferred Communication Channel**: Preferred channel of communication for marketing or promotional messages.
+
+
+**Data Types**:
+- **Customer ID**: Alphanumeric string or integer.
+- **First Name**, **Last Name**, **Email Address**, **Phone Number**, **Address**, **City**, **State/Province**, **Country**: Text/String.
+- **Postal Code/ZIP Code**: Alphanumeric string or integer.
+- **Age**: Numeric (integer or float).
+- **Gender**: Categorical variable.
+- **Income Level**: Categorical or numeric variable.
+- **Purchase History**: Data structure for tracking purchases (e.g., list of product IDs, timestamps).
+- **Frequency of Purchases**: Numeric (integer or float).
+- **Preferred Product Categories**: List or categorical variable.
+- **Loyalty Program Membership**: Boolean variable.
+- **Segmentation Variables**: Categorical or numeric variables.
+- **Customer Lifetime Value (CLV)**: Numeric (integer or float).
+- **Customer Satisfaction Scores**: Numeric (integer or float).
+- **Subscription Status**: Boolean variable.
+- **Preferred Communication Channel**: Categorical variable.
+
+
+INSERT INTO CustomerData (CustomerID, FirstName, LastName, EmailAddress, PhoneNumber, Address, City, StateProvince, Country, PostalCode, Age, Gender, IncomeLevel, PurchaseHistory, FrequencyOfPurchases, PreferredProductCategories, LoyaltyProgramMembership, SegmentationVariables, CustomerLifetimeValue, CustomerSatisfactionScores, CustomerInteractions, SubscriptionStatus, PreferredCommunicationChannel)
+VALUES 
+    ('C001', 'John', 'Doe', 'john.doe@example.com', '+1234567890', '123 Main St', 'Anytown', 'CA', 'USA', '12345', 35, 'Male', 'High', '[P001, P002, P003]', 10, 'Electronics, Home Appliances', true, 'High Income, Frequent Purchaser', 5000.00, 4.5, 'Customer service call on 2024-04-15', true, 'Email'),
+    ('C002', 'Jane', 'Smith', 'jane.smith@example.com', '+1987654321', '456 Elm St', 'Othertown', 'NY', 'USA', '54321', 28, 'Female', 'Medium', '[P004, P005]', 5, 'Personal Care, Grocery', false, 'Medium Income, Occasional Purchaser', 3000.00, 4.0, 'Email inquiry on 2024-04-18', false, 'Phone'),
+    ('C003', 'Michael', 'Johnson', 'michael.johnson@example.com', '+1654321879', '789 Oak St', 'Somewhere', 'TX', 'USA', '67890', 45, 'Male', 'High', '[P006, P007]', 8, 'Household, Grocery', true, 'High Income, Frequent Purchaser', 7000.00, 4.8, 'In-store visit on 2024-04-20', true, 'Email'),
+    ('C004', 'Emily', 'Brown', 'emily.brown@example.com', '+1789456123', '321 Pine St', 'Nowhere', 'FL', 'USA', '45678', 40, 'Female', 'High', '[P008, P009]', 6, 'Baby Care, Snacks', false, 'High Income, Occasional Purchaser', 4000.00, 4.2, 'Online chat on 2024-04-22', false, 'SMS'),
+    ('C005', 'Christopher', 'Wilson', 'christopher.wilson@example.com', '+1324657980', '987 Cedar St', 'Anywhere', 'WA', 'USA', '98765', 30, 'Male', 'Medium', '[P010]', 3, 'Beverages', true, 'Medium Income, Occasional Purchaser', 2500.00, 4.6, 'Email response on 2024-04-24', true, 'Email'),
+    ('C006', 'Jessica', 'Martinez', 'jessica.martinez@example.com', '+1212121212', '654 Birch St', 'Everywhere', 'IL', 'USA', '23456', 32, 'Female', 'Medium', '[P001, P002]', 7, 'Electronics, Snacks', false, 'Medium Income, Frequent Purchaser', 3500.00, 4.4, 'Phone call on 2024-04-25', true, 'Phone'),
+    ('C007', 'Daniel', 'Garcia', 'daniel.garcia@example.com', '+1888888888', '741 Walnut St', 'Nowhere', 'NV', 'USA', '34567', 50, 'Male', 'High', '[P003, P004, P005]', 9, 'Personal Care, Grocery, Snacks', true, 'High Income, Frequent Purchaser', 8000.00, 4.9, 'In-store visit on 2024-04-26', true, 'Email'),
+    ('C008', 'Ashley', 'Jones', 'ashley.jones@example.com', '+1555555555', '852 Maple St', 'Anywhere', 'CO', 'USA', '56789', 25, 'Female', 'Low', '[P006]', 2, 'Household', false, 'Low Income, Occasional Purchaser', 1500.00, 3.8, 'Online chat on 2024-04-27', false, 'SMS'),
+    ('C009', 'David', 'Rodriguez', 'david.rodriguez@example.com', '+1666666666', '369 Oak St', 'Anytown', 'GA', 'USA', '45678', 38, 'Male', 'Medium', '[P007, P008, P009]', 4, 'Grocery, Baby Care, Snacks', false, 'Medium Income, Occasional Purchaser', 3200.00, 4.1, 'Email inquiry on 2024-04-28', false, 'Email'),
+    ('C010', 'Amanda', 'Hernandez', 'amanda.hernandez@example.com', '+1999999999', '159 Elm St', 'Othertown', 'OH', 'USA', '23456', 42, 'Female', 'High', '[P010]', 1, 'Beverages', true, 'High Income, Occasional Purchaser', 1800.00, 4.3, 'Phone call on 2024-04-29', true, 'Phone');

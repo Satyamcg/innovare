@@ -1,0 +1,48 @@
+
+1. **Shelf ID**: A unique identifier for each shelf in the store. You can use an `INTEGER` data type for this column.
+
+2. **Category**: The category of products displayed on the shelf. This could be stored as a `VARCHAR` data type.
+
+3. **Sub-category**: Further classification of products within the category. This could also be stored as a `VARCHAR` data type.
+
+4. **Product ID**: A unique identifier for each product displayed on the shelf. You can use an `INTEGER` or `VARCHAR` data type.
+
+5. **Product Name**: The name or description of the product displayed on the shelf. This would typically be stored as a `VARCHAR` data type.
+
+6. **Quantity**: The quantity of each product available on the shelf. This would typically be stored as an `INTEGER` data type.
+
+7. **Price**: The price of each product displayed on the shelf. You can use a `FLOAT` or `DECIMAL` data type to represent prices.
+
+8. **Placement Strategy**: Information about the strategy used for placing the products on the shelf. This could be stored as a `VARCHAR` data type.
+
+9. **Shelf Layout**: Details about the layout or arrangement of products on the shelf. This could be stored as a `VARCHAR` data type.
+
+10. **Last Updated**: The date and time when the shelf management data was last updated. You can use a `DATETIME` or `TIMESTAMP` data type for this.
+
+CREATE TABLE ShelfManagementData (
+    ShelfID INTEGER PRIMARY KEY,
+    Category VARCHAR(50),
+    Subcategory VARCHAR(50),
+    ProductID INTEGER,
+    ProductName VARCHAR(100),
+    Quantity INTEGER,
+    Price FLOAT,
+    PlacementStrategy VARCHAR(255),
+    ShelfLayout VARCHAR(255),
+    LastUpdated DATETIME
+);
+```
+
+
+INSERT INTO ShelfManagementData (ShelfID, Category, Subcategory, ProductID, ProductName, Quantity, Price, PlacementStrategy, ShelfLayout, LastUpdated)
+VALUES 
+    (1, 'Electronics', 'Smartphones', 101, 'Smartphone A', 20, 599.99, 'Featured products at eye level', 'Grid layout', '2024-04-25 10:00:00'),
+    (2, 'Clothing', 'Men''s Wear', 102, 'Shirt A', 30, 29.99, 'Seasonal collection display', 'Hanging racks', '2024-04-25 11:00:00'),
+    (3, 'Home Appliances', 'Kitchen Appliances', 103, 'Coffee Maker', 15, 89.99, 'Promotion display near entrance', 'Stacked display', '2024-04-25 12:00:00'),
+    (4, 'Groceries', 'Beverages', 104, 'Soft Drink', 50, 1.99, 'Bulk buy display', 'Refrigerated section', '2024-04-25 13:00:00'),
+    (5, 'Electronics', 'Laptops', 105, 'Laptop A', 10, 899.99, 'Interactive demo display', 'Shelf with power outlets', '2024-04-25 14:00:00'),
+    (6, 'Clothing', 'Women''s Wear', 106, 'Dress A', 25, 49.99, 'New arrivals display', 'Mannequin display', '2024-04-25 15:00:00'),
+    (7, 'Home Appliances', 'Cleaning Appliances', 107, 'Vacuum Cleaner', 20, 149.99, 'End-cap display', 'Open shelving', '2024-04-25 16:00:00'),
+    (8, 'Groceries', 'Snacks', 108, 'Chips', 40, 2.49, 'Cross-merchandising display', 'Front of store display', '2024-04-25 17:00:00'),
+    (9, 'Electronics', 'Accessories', 109, 'Headphones', 30, 49.99, 'Promotion display near checkout', 'Pegboard display', '2024-04-25 18:00:00'),
+    (10, 'Clothing', 'Kids'' Wear', 110, 'T-shirt', 50, 9.99, 'Clearance rack', 'Color-coded shelves', '2024-04-25 19:00:00');

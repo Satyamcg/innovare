@@ -1,0 +1,50 @@
+1. **Transaction ID**: A unique identifier for each transaction.
+2. **Timestamp**: Date and time of the transaction.
+3. **Customer ID**: An identifier for the customer making the purchase (if available).
+4. **Product ID**: The identifier of the product(s) purchased.
+5. **Quantity Purchased**: The quantity of each product purchased in the transaction.
+6. **Price Paid**: The total price paid for the transaction.
+7. **Channel**: The sales channel through which the transaction occurred (e.g., online, in-store).
+8. **Region/Store ID**: Identifier for the region or store where the transaction took place.
+9. **Geo Position (Lat/Long)**: The geographic coordinates of the transaction location.
+10. **Payment Method**: The method of payment used for the transaction.
+11. **Promotions/Discounts Applied**: Any discounts or promotions applied to the transaction.
+12. **Customer Segment**: A classification of customers based on demographic or behavioral characteristics.
+13. **Transaction Type**: Indicates the type of transaction (e.g., regular purchase, return, exchange).
+14. **Transaction Status**: Indicates the status of the transaction (e.g., completed, pending).
+15. **Salesperson ID**: Identifier for the salesperson involved in the transaction (if applicable).
+
+
+**Data Types**:
+- **Transaction ID**: Alphanumeric string or integer.
+- **Timestamp**: Date/time data type.
+- **Customer ID**: Alphanumeric string or integer.
+- **Product ID**: Alphanumeric string or integer.
+- **Quantity Purchased**: Numeric (integer or float).
+- **Price Paid**: Numeric (integer or float).
+- **Channel**: Categorical variable.
+- **Region/Store ID**: Alphanumeric string or integer.
+- **Geo Position (Lat/Long)**: Float data type for latitude and longitude.
+- **Payment Method**: Categorical variable.
+- **Promotions/Discounts Applied**: Categorical or Boolean variable.
+- **Customer Segment**: Categorical variable.
+- **Transaction Type**: Categorical variable.
+- **Transaction Status**: Categorical variable.
+- **Salesperson ID**: Alphanumeric string or integer.
+
+Here's a sample insertion of 10 records into the Transaction Data table, considering the foreign key constraints and data types:
+
+```sql
+INSERT INTO TransactionData (TransactionID, Timestamp, CustomerID, ProductID, QuantityPurchased, PricePaid, Channel, RegionStoreID, GeoPosition, PaymentMethod, PromotionsApplied, CustomerSegment, TransactionType, TransactionStatus, SalespersonID)
+VALUES 
+    ('T001', '2024-04-20 10:15:00', 1, 'P001', 1, 1.99, 'Online', '101', '40.7128, -74.0060', 'Credit Card', 'None', 'High Income', 'Purchase', 'Completed', 'S001'),
+    ('T002', '2024-04-20 11:30:00', 2, 'P002', 2, 4.98, 'In-store', '102', '34.0522, -118.2437', 'Cash', '20% off', 'Medium Income', 'Purchase', 'Completed', 'S002'),
+    ('T003', '2024-04-21 09:45:00', 3, 'P003', 1, 4.99, 'Online', '103', '42.3601, -71.0589', 'Credit Card', '10% off', 'High Income', 'Purchase', 'Completed', 'S003'),
+    ('T004', '2024-04-21 12:00:00', 4, 'P004', 3, 5.37, 'In-store', '104', '37.7749, -122.4194', 'Debit Card', 'None', 'Medium Income', 'Purchase', 'Completed', 'S004'),
+    ('T005', '2024-04-22 14:20:00', 5, 'P005', 1, 2.99, 'Online', '105', '33.4484, -112.0740', 'Credit Card', 'None', 'Low Income', 'Exchange', 'Completed', 'S005'),
+    ('T006', '2024-04-22 16:30:00', 6, 'P006', 2, 19.98, 'In-store', '106', '29.7604, -95.3698', 'Cash', '5% off', 'High Income', 'Purchase', 'Completed', 'S006'),
+    ('T007', '2024-04-23 10:00:00', 7, 'P007', 2, 3.49, 'Online', '107', '39.9526, -75.1652', 'Credit Card', 'None', 'Medium Income', 'Purchase', 'Completed', 'S007'),
+    ('T008', '2024-04-23 13:45:00', 8, 'P008', 1, 29.99, 'In-store', '108', '34.0522, -118.2437', 'Debit Card', 'None', 'High Income', 'Purchase', 'Completed', 'S008'),
+    ('T009', '2024-04-24 11:10:00', 9, 'P009', 2, 4.99, 'Online', '109', '41.8781, -87.6298', 'Credit Card', '20% off', 'Low Income', 'Purchase', 'Completed', 'S009'),
+    ('T010', '2024-04-24 15:00:00', 10, 'P010', 1, 1.49, 'In-store', '110', '32.7157, -117.1611', 'Cash', 'None', 'Medium Income', 'Return', 'Completed', 'S010');
+```

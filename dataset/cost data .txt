@@ -1,0 +1,45 @@
+
+1. **Cost ID**: A unique identifier for each cost entry. You can use an `INTEGER` data type for this column.
+
+2. **Cost Type**: The type or category of cost (e.g., transportation, labor, commodities). This could be stored as a `VARCHAR` data type.
+
+3. **Description**: A brief description of the cost item. This would typically be stored as a `VARCHAR` data type.
+
+4. **Amount**: The monetary amount of the cost item. You can use a `FLOAT` or `DECIMAL` data type to represent amounts.
+
+5. **Currency**: The currency in which the cost is denominated (e.g., USD, EUR). This could be stored as a `VARCHAR` data type.
+
+6. **Date**: The date when the cost was incurred. You can use a `DATE` data type for this column.
+
+7. **Region/Store ID**: An identifier for the region or store associated with the cost. This could be stored as an `INTEGER` or `VARCHAR` data type.
+
+8. **Last Updated**: The date and time when the cost data was last updated. You can use a `DATETIME` or `TIMESTAMP` data type for this.
+
+
+
+```sql
+CREATE TABLE CostData (
+    CostID INTEGER PRIMARY KEY,
+    CostType VARCHAR(50),
+    Description VARCHAR(255),
+    Amount FLOAT,
+    Currency VARCHAR(3),
+    Date DATE,
+    RegionStoreID INTEGER,
+    LastUpdated DATETIME
+);
+
+
+
+INSERT INTO CostData (CostID, CostType, Description, Amount, Currency, Date, RegionStoreID, LastUpdated)
+VALUES 
+    (301, 'Transportation', 'Shipping cost for inventory restocking', 1500.00, 'USD', '2024-04-25', 101, '2024-04-25 10:00:00'),
+    (302, 'Labor', 'Wages for store staff', 3500.00, 'USD', '2024-04-25', 102, '2024-04-25 11:00:00'),
+    (303, 'Commodities', 'Purchase of raw materials for production', 2500.00, 'USD', '2024-04-25', 103, '2024-04-25 12:00:00'),
+    (304, 'Transportation', 'Freight cost for receiving goods', 1200.00, 'USD', '2024-04-25', 104, '2024-04-25 13:00:00'),
+    (305, 'Labor', 'Contractor fees for store renovation', 5000.00, 'USD', '2024-04-25', 105, '2024-04-25 14:00:00'),
+    (306, 'Commodities', 'Purchase of cleaning supplies', 800.00, 'USD', '2024-04-25', 106, '2024-04-25 15:00:00'),
+    (307, 'Transportation', 'Delivery cost for online orders', 1800.00, 'USD', '2024-04-25', 107, '2024-04-25 16:00:00'),
+    (308, 'Labor', 'Overtime wages for holiday season', 4000.00, 'USD', '2024-04-25', 108, '2024-04-25 17:00:00'),
+    (309, 'Commodities', 'Purchase of packaging materials', 600.00, 'USD', '2024-04-25', 109, '2024-04-25 18:00:00'),
+    (310, 'Transportation', 'Fuel expenses for delivery vehicles', 900.00, 'USD', '2024-04-25', 110, '2024-04-25 19:00:00');
